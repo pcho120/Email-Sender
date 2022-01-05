@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Sender</title>
+        <meta charset = "utf-8"/>
+        <meta name = "viewport" content = "width-device-width, initial-scale-1.0">
+        <link rel = "stylesheet" href = "email.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+            emailjs.init("user_4CcGsgvS5bhaJMaKQdY4N");
+            })();
+        </script>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!--Top Buttons-->
+        <div id = "header">
+            
+            <button id = "compose" onclick = "showCompose()"> Compose </button>
+            <button id = "print" onclick = "window.print()">Print</button>
+            <button id = "js-logout" onclick = "window.location.href = 'login.html';">Logout</button>
+        </div>
+
+        <section>
+             <!--left bar-->
+            <article>
+                <div class="leftBar css-262" aria-label="Message list">
+                    <h3>Sent Items</h3>
+                    <button id = "list1" onclick = 'listClicked(this)'>
+                        <p id = "list1To"></p>
+                        <p id = "list1Subj"></p>
+                        <p id = "list1Body"></p>
+                    </button><br>
+                    <button id = "list2" onclick = 'listClicked(this)'>
+                        <p id = "list2To"></p>
+                        <p id = "list2Subj"></p>
+                        <p id = "list2Body"></p>
+                    </button><br>
+                    <button id = "list3" onclick = 'listClicked(this)'>
+                        <p id = "list3To"></p>
+                        <p id = "list3Subj"></p>
+                        <p id = "list3Body"></p>
+                    </button><br>
+                    <button id = "list4" onclick = 'listClicked(this)'>
+                        <p id = "list4To"></p>
+                        <p id = "list4Subj"></p>
+                        <p id = "list4Body"></p>
+                    </button><br>
+                    <button id = "list5" onclick = 'listClicked(this)'>
+                        <p id = "list5To"></p>
+                        <p id = "list5Subj"></p>
+                        <p id = "list5Body"></p>
+                    </button><br>
+                </div>
+            </article>
+            <aside>
+                <!--default-->
+                <div id = "default">
+                    <p>Select an item to read or click compose</p>
+                </div>
+
+                <!--Compose Part-->
+                <div id = "composePart">
+                    <div id = "divFrom">
+                        <b>From:</b>
+                        <div id = "getID"></div><br>
+                    </div>
+                    <form class = "js-formTo formTo">
+                        <b>To:</b><br>
+                        <input style = "border: 1px solid #eaeaea" type = "text" id = "toEmail" placeholder = "response Email" size = "130"><br><br>
+                    </form>
+                    <form class = "js-formName formName">
+                        <b>Response Name:</b><br>
+                        <input style = "border: 1px solid #eaeaea" type = "text" id = "toName" placeholder = "Enter to name" size = "130"><br><br>
+                    </form>
+                    <form class = "js-formSubject formSubject">
+                        <b>Subject:</b><br>
+                        <input style = "border: 1px solid #eaeaea" type = "text" id = "subject" placeholder = "subject" size = "130"><br><br>
+                    </form>
+                    <form class = "js-formBody formBody">
+                        <b>Body:</b><br>
+                        <input style = "border: 1px solid #eaeaea" type = "text" id = "msg" placeholder = "Enter message" size = "130"><br><br>
+                    </form>                    
+                    
+                    <button id = "emeilSend" onclick = 'EmailValidity()'>Send Email</button>
+                </div>
+                <!--read sent Item-->
+                <div id = "readSentItem">
+                    <h3>Sent Email</h3>
+                    <b>To:</b>
+                    <p id = "readTo"></p>
+                    <b>Subject:</b>
+                    <p id = "readSubj"></p>
+                    <b>Body:</b>
+                    <p id = "readBody"></p>
+
+                    <button id = "innerPrint" onclick = "window.print()">Print</button>
+                    <button id = "innerDelete" onclick = "clickedInnerDelete()">Delete</button>
+                </div>
+            </aside>
+        </section>
+         <!--scripts-->
+         <script>
+            document.getElementById("getID").innerHTML = localStorage.getItem("user ID");
+         </script>
+         <!--connect email.html and email.js-->
+        <script src = "email.js"></script>
+    </body>
+</html>

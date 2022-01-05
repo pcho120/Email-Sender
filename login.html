@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Log in</title>
+        <link rel = "stylesheet" href = "login.css">
+    </head>
+
+    <body>
+        <div class = "main">
+            <p class = "sign">Log in</p>
+            <p id = "note">You must log in with outlook email to send email</p>
+            
+            <form class = "js-form">
+                <input class = "js-id id" type = "text" placeholder = "Username">
+                <input class = "js-pw pw" type = "password" placeholder = "Password">
+            </form>
+            <button id = "js-submit" onclick = "init()">Sign in</button>
+            <p class = "forgot"><a href = "#" onclick = "alert('type in your actual email address and password')">Forgot Password?</a></p>
+        </div>
+        <script src = "login.js"></script>
+    </body>
+</html>

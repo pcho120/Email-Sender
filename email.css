@@ -1,0 +1,83 @@
+/*buttons*/
+#compose, #delete, #print, #js-logout{
+    background: #003e7e;
+    border: none;
+    color: white;
+    padding: 2px 15px;
+    font-family: 'Source San Pro', sans-serif;
+    font-size: 1.2em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+/* top padding */
+#header {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    clear: both;
+    background: #003e7e;
+}
+.leftBar {
+    border-right: 1px solid; /* vertical line */
+    flex-direction: column;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.css-262{
+    width: 380px;
+    max-width: 380px;
+    flex: 0 0 auto;
+}
+article{
+    float: left;
+    width: 30%;
+    padding: 20px;
+    /*
+    background-color: aquamarine;
+    */
+}
+aside{
+    float:left;
+    padding: 20px;
+    width: 70%;
+    /*
+    background-color: beige;
+    */
+}
+/* Email body */
+#msg {
+    height: 200px;
+}
+/*
+#divForm, #divTo, #divName, #divSubject, #divBody{
+    border-style: groove;
+}
+*/
+#default{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    clear: both;
+    background: white;
+    height: 100%;
+    
+}
+#list1, #list3, #list5{
+    background-color: #ebebff;
+    color: black;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding-right: 50px;
+}
+#list2, #list4{
+    background-color: #d8d8ff;
+    color: black;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    padding-right: 50px;
+}
